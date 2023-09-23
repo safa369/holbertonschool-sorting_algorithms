@@ -6,18 +6,23 @@
 */
 void selection_sort(int *array, size_t size)
 {
-size_t i, j;
+size_t i, j, Ncase;
 int tmp;
 
 for (i = 0; i < size; i++)
 {
-for (j = 0; j < size ; j++)
+Ncase = i;
+for (j = i + 1; j < size ; j++)
 {
-if (array[i] < array[j])
+if (array[j] < array[Ncase])
+{
+Ncase = j;
+}
+if (array[Ncase] != array[i])
 {
 tmp = array[i];
-array[i] = array[j];
-array[j] = tmp;
+array[i] = array[Ncase];
+array[Ncase] = tmp;
 print_array(array, size);
 }
 }
