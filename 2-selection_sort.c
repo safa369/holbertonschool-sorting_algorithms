@@ -19,13 +19,13 @@ if (array[j] < array[Ncase])
 {
 Ncase = j;
 }
+}
 if (array[Ncase] != array[i])
 {
 tmp = array[i];
 array[i] = array[Ncase];
 array[Ncase] = tmp;
 print_array(array, size);
-}
 }
 }
 }
