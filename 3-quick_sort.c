@@ -30,7 +30,7 @@ void quick_sort_rec(int *array, int lower, int higher, size_t size)
 
 	if (lower < higher)
 	{
-		l_p = lomuto_partition(array, lower, higher, size);
+		l_p = lomuto_part(array, lower, higher, size);
 		quick_sort_rec(array, lower, l_p - 1, size);
 		quick_sort_rec(array, l_p + 1, higher, size);
 	}
@@ -45,7 +45,7 @@ void quick_sort_rec(int *array, int lower, int higher, size_t size)
   *
   * Return: Nothing!
   */
-int lomuto_partition(int *array, int lower, int higher, size_t size)
+int lomuto_part(int *array, int lower, int higher, size_t size)
 {
 	int i = 0, j = 0, pivot = 0, aux = 0;
 
